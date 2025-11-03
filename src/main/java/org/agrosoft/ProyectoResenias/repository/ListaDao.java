@@ -2,6 +2,8 @@ package org.agrosoft.ProyectoResenias.repository;
 
 import org.agrosoft.ProyectoResenias.entity.Lista;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ListaDao extends JpaRepository <Lista, Long> {
+@Repository
+public interface ListaDao extends JpaRepository<Lista, Long> {
 }
