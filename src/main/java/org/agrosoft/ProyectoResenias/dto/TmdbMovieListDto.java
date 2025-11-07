@@ -1,7 +1,7 @@
 package org.agrosoft.ProyectoResenias.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,12 +16,12 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TmdbMovieListDto {
 
-    @JsonProperty("page")
+    @JsonAlias("page")
     private int pagina;
-    @JsonProperty("totalResults")
+    @JsonAlias("totalResults")
     private int resultadosTotales;
-    @JsonProperty("totalPages")
+    @JsonAlias("totalPages")
     private int paginasTotales;
-    @JsonProperty("results")
+    @JsonAlias("results")
     private List<TmdbMovieDto> listaPeliculas;
 }

@@ -1,7 +1,7 @@
 package org.agrosoft.ProyectoResenias.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,17 +15,17 @@ import lombok.NoArgsConstructor;
 public class TmdbMovieDto {
 
     private long id;
-    @JsonProperty("title")
+    @JsonAlias("title")
     private String titulo;
-    @JsonProperty("overview")
+    @JsonAlias("overview")
     private String descripcion;
-    @JsonProperty("release_date")
+    @JsonAlias("release_date")
     private String fechaEstreno;
-    @JsonProperty("popularity")
+    @JsonAlias("popularity")
     private double popularidad;
-    @JsonProperty("vote_average")
+    @JsonAlias("vote_average")
     private double promedio;
-    @JsonProperty("vote_count")
+    @JsonAlias("vote_count")
     private int conteoDeVotos;
 
 }
